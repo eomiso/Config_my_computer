@@ -65,4 +65,4 @@ endif
 "===========================================================================
 
 " kj => esc, Escape insert mode
-inoremap kj <ESC>
+inoremap ef <ESC>
