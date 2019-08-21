@@ -63,7 +63,7 @@ endif
 "=======Key Mapping========================================================
 
 " kj => esc, Escape insert mode
-inoremap ef <ESC>
+inoremap df <ESC>
 
 "=======OS Integrity ======================================================
 set clipboard=unnamed "use OS clipboard
