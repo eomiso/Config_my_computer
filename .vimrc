@@ -44,6 +44,24 @@ if has("autocmd")
 
   augroup END
 
+  " Autocmd group for default code when opening new code
+  augroup defaultC
+	au!
+	autocmd FileType c call StandardIO()
+	fu! StandardIO()
+		if line("$") == 1
+			call append(0, "#include <stdio.h>")
+			call append(1, "#include <stdlib.h>")
+			call append(3, "int main(void)")
+			call append(4, "{")
+			call append(5, "	")
+			call append(6, "	return 0;")
+			call append(7, "}")
+		endif
+	endfu
+	autocmd FileType c setlocal expandtab tabstop=4
+  augroup END
+
 else
 
   set autoindent		" always set autoindenting on
@@ -70,3 +88,4 @@ set clipboard=unnamed "use OS clipboard
 
 "=======Workspace screen===================================================
 set number
+"=======Default code when opening new source file =========================
