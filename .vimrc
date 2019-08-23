@@ -59,7 +59,11 @@ if has("autocmd")
 			call append(7, "}")
 		endif
 	endfu
-	autocmd FileType c setlocal expandtab tabstop=4
+	autocmd FileType c set tabstop=4 shiftwidth=4 
+  augroup END
+  augroup defaultHTML
+  au!
+  autocmd FileType html setlocal tabstop=2 shiftwidth=2
   augroup END
 
 else
