@@ -7,3 +7,5 @@ else
   echo "Unexpected termination of $0"
   exit 0
 fi
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
